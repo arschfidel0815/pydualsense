@@ -29,8 +29,11 @@ class PlayerID(IntFlag):
 
 class TriggerModes(IntFlag):
     Off = 0x0, # no resistance
-    Rigid = 0x1, # continous resistance
+    # continous resistance
+    # force_id 0 : start point of the resistance (0 = resistance over the entire pull distance; 255 = basically no resistance at all)
+    # force_id 1 : strength of the resistance (0 = weak resistance, 255 = strong resistance)
     Pulse = 0x2, # section resistance
+    Rigid = 0x1, 
     Rigid_A = 0x1 | 0x20,
     Rigid_B = 0x1 | 0x04,
     Rigid_AB = 0x1 | 0x20 | 0x04,
