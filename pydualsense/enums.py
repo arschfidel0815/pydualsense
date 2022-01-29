@@ -41,6 +41,9 @@ class TriggerModes(IntFlag):
     Rigid_B = 0x1 | 0x04,
     Rigid_AB = 0x1 | 0x20 | 0x04,
     Pulse_A = 0x2 | 0x20,
+    # section resistance with rumble
+    # force_id 0 : rumble frequency
+    # force_id 2 : start point of the section (0 = section starts at the start of the pull distance; 255 = section starts at the end of the pull distance)
     Pulse_B = 0x2 | 0x04,
     Pulse_AB = 0x2 | 0x20 | 0x04,
     Calibration= 0xFC
